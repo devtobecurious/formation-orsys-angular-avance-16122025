@@ -11,6 +11,14 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "paths": {
+      "searchBar": [
+        "./dist/search-bar"
+      ],
+      "selfies": [
+        "./dist/selfies"
+      ]
+    },
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -21,5 +29,25 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/main-app/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/main-app/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/search-bar/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/search-bar/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/selfies/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/selfies/tsconfig.spec.json"
+    }
+  ]
 }
