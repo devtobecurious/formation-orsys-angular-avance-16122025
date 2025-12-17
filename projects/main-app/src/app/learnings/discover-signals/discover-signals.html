@@ -1,0 +1,14 @@
+@let cities = list()();
+
+{{titleAsMaj()}}
+<br>
+@for (city of cities; track city) {
+  - {{city}}
+}
+
+<hr>
+
+<br>
+<button (click)="setNewTitle()">New title</button>
+<br>
+<button (click)="addCity()">Add City</button>
