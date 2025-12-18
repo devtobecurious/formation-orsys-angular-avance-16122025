@@ -1,4 +1,4 @@
-import { inject, Injectable } from '@angular/core';
+import { computed, inject, Injectable } from '@angular/core';
 import { Observable, shareReplay } from 'rxjs';
 import { Selfie, Selfies } from '../models/selfie';
 import { GetListSelfiesInfra } from './get-list-selfies.infra';
@@ -24,5 +24,11 @@ export class GetListSelfiesBusiness {
 
   getAll(): Observable<Selfies> {
     return this.selfies$;
+  }
+
+  get nbLikes() {
+    return computed(() => {
+      return this.selfiesAsSignal()!.reduce((acc, selfie) => acc + selfie.nbLikes, 0);
+    })
   }
 }
