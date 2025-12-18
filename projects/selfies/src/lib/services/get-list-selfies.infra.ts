@@ -7,7 +7,7 @@ import { Selfies } from '../models/selfie';
 export class GetListSelfiesInfra {
   private readonly httpClient = inject(HttpClient);
 
-  getAll(): Observable<Selfies> {
+  getAll(filter = ''): Observable<Selfies> {
     return this.httpClient.get<Selfies>('/api/selfies').pipe(retry(2));
   }
 }

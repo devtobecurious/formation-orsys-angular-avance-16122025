@@ -27,8 +27,6 @@ const fakeInfra = {
       @for(selfie of selfies; track selfie.id) {
         <lib-one-selfie [selfie]="selfie" />
       }
-
-      
   `,
   styles: ``,
   //providers: [{ provide: GetListSelfiesInfra, useValue: fakeInfra }],

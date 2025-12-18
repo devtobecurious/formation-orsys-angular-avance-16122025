@@ -1,0 +1,18 @@
+@let items = wookieesResource.value();
+
+@if(wookieesResource.isLoading()) {
+    <div>Loading...</div>
+} 
+
+Etat en cours : {{wookieesResource.status()}}
+
+@let error = wookieesResource.error();
+@if (error) {
+    <div>Error: {{error.message}}</div>
+}
+
+@for (item of items; track $index) {
+    <div>
+        {{item.name}}
+    </div>
+}
