@@ -1,1 +1,7 @@
-<p>add-wookiee works!</p>
+<form>
+    <input type="text" [field]="wookieeForm.name" />
+    @if(wookieeForm.name().invalid()) {
+        <i>Chanmp name invalide</i>
+    }
+    <button type="button"  [disabled]="wookieeForm().invalid()" (click)="save()">Save</button>
+</form>
